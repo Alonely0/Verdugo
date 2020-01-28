@@ -1,0 +1,1 @@
+banMember.send(`Has sido ahorcado 1 dia por ${mentionMessage}. Si mañana a esta hora no puede entrar al servidor, clicke a este enlace, https://discord.gg/Nrbd6fY. Solo funcionara cuando deje de estar baneado. Si el enlace no funciona tendra que avisar a un administrador del servidor para que lo invite o revoque el baneo en caso de error.`).then(() =>
