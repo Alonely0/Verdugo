@@ -3,7 +3,7 @@ const ms = require("ms");
 
 const bot = new Discord.Client();
 
-const token = 'BOT_TOKEN';
+const token = 'NjYyMzM0MzIwODc0MjI1Njc0.Xg5UKg.IvLnJxqmq3DqVnU5Oo_Uwjzcpig';
 
 const PREFIX = 'v!'
 
