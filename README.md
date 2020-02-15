@@ -1,2 +1,2 @@
 # Verdugo
-Discord-bot
+Bot discord

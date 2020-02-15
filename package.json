@@ -8,7 +8,7 @@
   },
   "keywords": [],
   "author": "@Guillem0907",
-  "license": "ISC",
+  "license": "GNU",
   "dependencies": {
     "discord.js": "^11.5.1",
     "dotenv": "^8.2.0",

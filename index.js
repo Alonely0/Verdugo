@@ -7,8 +7,8 @@ const token = 'NjYyMzM0MzIwODc0MjI1Njc0.Xg5UKg.IvLnJxqmq3DqVnU5Oo_Uwjzcpig';
 
 const PREFIX = 'v!'
 
-const fs = require('fs');
 
+const fs = require('fs');
 
 bot.commands = new Discord.Collection();
  
