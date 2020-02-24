@@ -1,9 +1,8 @@
 const Discord = require('discord.js');
-const ms = require("ms");
 
 const bot = new Discord.Client();
 
-const token = `${{ BOT_TOKEN }}`;
+const token = 'NjYyMzM0MzIwODc0MjI1Njc0.XklW2A.Vs-adSHEpWZFRkm-YS8H6sGcp6A';
 
 const PREFIX = 'v!'
 
@@ -28,11 +27,22 @@ bot.on('message', message => {
   let args = message.content.substring(PREFIX.length).split(" ");
 
   switch(args[0]){
-     case 'help':
-        message.channel.send('Sintaxis: v!condenar <@condenado> <motivo/motivos> <afectado>(no poner link al afectado, solo al condenado, osea al condenado poner @nick mientras q al afectado solo el nick, sin la @) PD: el condenado sera avisado por sus crimenes y sera baneado 1 dia.')
-     case 'condenar':
-        bot.commands.get('condenar').execute(message, args);
+     case 'micreador':
+      bot.commands.get('micreador').execute(message, args);
     break;
+
+     case 'help':
+      bot.commands.get('help').execute(message, args);
+    break;
+    
+     case 'condenar':
+      bot.commands.get('condenar').execute(message, args);
+    break;
+
+     case 'micodigo':
+      message.channel.send("Soy tanto de codigo abierto como de software libre. Cualquier duda: guillem0907@gmail.com Mi codigo fuente: https://github.com/Alonely0/Verdugo Github de 4lon3ly: https://github.com/Alonely0/", {files: ["./img/verdugo.jpeg"]});
+     break;
+
   }
-})
+});
 bot.login(token)
