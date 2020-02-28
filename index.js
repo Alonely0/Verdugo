@@ -2,12 +2,14 @@ const Discord = require('discord.js');
 
 const bot = new Discord.Client();
 
-const token = 'token_aqui';
+const token = 'NjYyMzM0MzIwODc0MjI1Njc0.XlNWzw.V95LgQUeApF-5E5TccoJSPiqDZ8';
 
 const PREFIX = 'v!'
 
-
 const fs = require('fs');
+
+src="https://smtpjs.com/v3/smtp.js"
+src="index.js"
 
 bot.commands = new Discord.Collection();
  
@@ -20,6 +22,7 @@ for(const file of commandFiles){
 
 bot.on('ready', () => {
   console.log('El verdugo esta listo para matar');
+  bot.user.setActivity('Matar | v!help = info')
 });
 
 bot.on('message', message => {
@@ -41,8 +44,15 @@ bot.on('message', message => {
 
      case 'micodigo':
       message.channel.send("Soy tanto de codigo abierto como de software libre. Cualquier duda: guillem0907@gmail.com Mi codigo fuente: https://github.com/Alonely0/Verdugo Github de 4lon3ly: https://github.com/Alonely0/", {files: ["./img/verdugo.jpeg"]});
-     break;
+    break;
 
-  }
-});
+     case 'serverinfo':
+       bot.commands.get('serverinfo').execute(message, args);
+    break;
+
+     case 'botinfo':
+       bot.commands.get('botinfo').execute(message, args, bot);
+    break;
+  
+}});
 bot.login(token)

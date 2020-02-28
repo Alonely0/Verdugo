@@ -1,7 +1,7 @@
 {
   "name": "bot",
   "version": "1.0.0",
-  "description": "Bot para controlar criminales que incumplen las reglas o hacen algo malo.",
+  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -10,6 +10,7 @@
   "author": "@Guillem0907",
   "license": "GNU",
   "dependencies": {
+    "async": "^3.2.0",
     "discord.js": "^11.5.1",
     "dotenv": "^8.2.0",
     "ms": "^2.1.2"
