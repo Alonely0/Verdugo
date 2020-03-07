@@ -3,7 +3,7 @@ module.exports = {
     description: "Info del bot.",
     execute(message, args, bot){        
 
-const Discord = require("discord.js");
+    const Discord = require("discord.js");
     let bicon = bot.user.displayAvatarURL;
     let botembed = new Discord.RichEmbed()
     .setTitle("Bot information:")
@@ -16,4 +16,5 @@ const Discord = require("discord.js");
     .addField("API & lenguaje de programacion:", "Discord.js 11.5.0, programado completamente en Javascript.")
 
     message.channel.send(botembed);
+    
     }};
