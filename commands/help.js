@@ -3,7 +3,7 @@ module.exports = {
     description: "Ayuda e info.",
     execute(message, args){        
 
-        if (!args[1]) message.channel.send('Comandos disponibles: v!condenar | v!help | v!micreador | v!micodigo | v!serverinfo | v!botinfo | Para ver informacion detallada sobre cada comando escribir v!help <comando> ej: v!help condenar');
+        if (!args[1]) message.channel.send('Prefijo: v! , Comandos disponibles: condenar | help | micreador | micodigo | serverinfo | botinfo | Para ver informacion detallada sobre cada comando escribir v!help <comando> ej: v!help condenar');
         
         switch(args[1]){
             case 'condenar':

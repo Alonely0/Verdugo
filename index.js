@@ -2,14 +2,11 @@ const Discord = require('discord.js');
 
 const bot = new Discord.Client();
 
-const token = 'NjYyMzM0MzIwODc0MjI1Njc0.XlNWzw.V95LgQUeApF-5E5TccoJSPiqDZ8';
+const token = 'NjYyMzM0MzIwODc0MjI1Njc0.XlhwFA.9Af5PTy8jFv7Dc9ITgLDqDDl7co';
 
 const PREFIX = 'v!'
 
 const fs = require('fs');
-
-src="https://smtpjs.com/v3/smtp.js"
-src="index.js"
 
 bot.commands = new Discord.Collection();
  
@@ -35,7 +32,7 @@ bot.on('message', message => {
     break;
 
      case 'help':
-      bot.commands.get('help').execute(message, args);
+      bot.commands.get('help').execute(message, args, bot);
     break;
     
      case 'condenar':
@@ -52,7 +49,6 @@ bot.on('message', message => {
 
      case 'botinfo':
        bot.commands.get('botinfo').execute(message, args, bot);
-    break;
-  
+
 }});
-bot.login(token)
+bot.login(token);
