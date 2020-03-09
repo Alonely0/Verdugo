@@ -2,7 +2,7 @@ const Discord = require('discord.js');
 
 const bot = new Discord.Client();
 
-const token = 'Bot-token';
+const token = 'NjYyMzM0MzIwODc0MjI1Njc0.XmOc6g.NxOjEd8SL39ZqqSP-4_CAJg_LvI';
 
 const PREFIX = 'v!'
 
@@ -49,6 +49,11 @@ bot.on('message', message => {
 
      case 'botinfo':
        bot.commands.get('botinfo').execute(message, args, bot);
+    break;
+
+     case 'warn':
+       bot.commands.get('warn').execute(message, args);
+    break;
 
 }});
 bot.login(token);

@@ -45,5 +45,6 @@ module.exports = {
             .addField("Fecha de creacion", `${message.channel.guild.createdAt.toUTCString().substr(0, 16)} (${checkDays(message.channel.guild.createdAt)})`, true)
             .setThumbnail(message.guild.iconURL)
         message.channel.send({embed});
+        
     }};
     
