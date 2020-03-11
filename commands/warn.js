@@ -2,14 +2,16 @@ module.exports = {
     name: 'warn',
     description: "Avisa a un miembro sobre algo malo que ha hecho.",
 execute(message, args){
-    const Discord = require('discord.js')
+    const fs = require('fs');
+    if (message.member.roles.find("name", "Monarca")){
+    const Discord = require('discord.js');
     var embedColor = '#ff0000' 
     const moment = require("moment");
     var missingPermissionsEmbed = new Discord.RichEmbed() 
         .setColor(embedColor)
         .setAuthor(message.author.username, message.author.avatarURL)
         .setTitle('Permisos insuficientes!')
-        .setDescription('Necesitas el permiso `MANAGE_MEMBERS` para usar este comando!')
+        .setDescription('Necesitas el permiso `MANAGE_MESSAGES` para usar este comando!')
         .setTimestamp();
     var missingArgsEmbed = new Discord.RichEmbed() 
         .setColor(embedColor)
@@ -17,8 +19,9 @@ execute(message, args){
         .setTitle('Argumentos insuficientes!')
         .setDescription('Uso: v!warn <@User> <Motivo>')
         .setTimestamp();
-    if(!message.member.hasPermission('MANAGE_MEMBERS')) return message.channel.send(missingPermissionsEmbed); 
-    let mentioned = message.mentions.users.first(); 
+    if(!message.member.hasPermission('MANAGE_MESSAGES')) return message.channel.send(missingPermissionsEmbed); 
+    let mentioned = message.mentions.users.first();
+    if (mentioned.id == 615199347398672392) return message.channel.send('No warneare a mi padre.');
     if(!mentioned) return message.channel.send(missingArgsEmbed); 
     let reason = args.slice(1).join(' ') 
     if(!reason) return message.channe.send(missingArgsEmbed); 
@@ -33,5 +36,10 @@ execute(message, args){
         .setFooter(`En: ${moment().format("dddd, MMMM Do YYYY, h:mm A", Date.now())}`)
         .setTimestamp();
     mentioned.send(warningEmbed); 
-    message.channel.send(warningEmbed); 
-}};
+    message.channel.send(warningEmbed);
+    
+
+    }else{
+    message.channel.send('Tienes que tener el rol `Monarca` para poder usar este comando');
+    
+}}};

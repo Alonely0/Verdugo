@@ -2,11 +2,13 @@ const Discord = require('discord.js');
 
 const bot = new Discord.Client();
 
-const token = 'NjYyMzM0MzIwODc0MjI1Njc0.XmOc6g.NxOjEd8SL39ZqqSP-4_CAJg_LvI';
+const token = 'NjYyMzM0MzIwODc0MjI1Njc0.XmaA6g._3xobCxxSU88IwT64OJ4v9IXFoE';
 
 const PREFIX = 'v!'
 
 const fs = require('fs');
+
+const moment = require('moment');
 
 bot.commands = new Discord.Collection();
  
@@ -31,7 +33,7 @@ bot.on('message', message => {
       bot.commands.get('micreador').execute(message, args);
     break;
 
-     case 'help':
+     case 'help': 
       bot.commands.get('help').execute(message, args, bot);
     break;
     
@@ -53,6 +55,18 @@ bot.on('message', message => {
 
      case 'warn':
        bot.commands.get('warn').execute(message, args);
+    break;
+
+     case 'web':
+       message.channel.send('La web: https://verdugo-discord-bot.webnode.es/')
+    break;
+     
+     case 'inv':
+       message.channel.send('Enlace de invitacion del bot: https://discordapp.com/api/oauth2/authorize?client_id=662334320874225674&permissions=8&scope=bot')
+    break;
+
+     case 'server':
+       message.channel.send('Mi servidor: https://discord.gg/wjRBMJm')
     break;
 
 }});
