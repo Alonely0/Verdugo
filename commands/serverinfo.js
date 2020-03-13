@@ -28,6 +28,7 @@ module.exports = {
             "southafrica": ":flag_za: Sudadrica",
             "europe": ":flag_eu: Europa"
         };
+        try {
             const embed = new Discord.RichEmbed()      
             .setTitle("Informacion del sevidor:")
             .setColor("#ff0000")
@@ -44,7 +45,9 @@ module.exports = {
             .addField("Roles", message.guild.roles.size, true)
             .addField("Fecha de creacion", `${message.channel.guild.createdAt.toUTCString().substr(0, 16)} (${checkDays(message.channel.guild.createdAt)})`, true)
             .setThumbnail(message.guild.iconURL)
-        message.channel.send({embed});
         
+            message.channel.send({embed});
+        }
+       catch(err){message.channel.send('error')};
     }};
     

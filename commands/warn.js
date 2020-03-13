@@ -2,7 +2,7 @@ module.exports = {
     name: 'warn',
     description: "Avisa a un miembro sobre algo malo que ha hecho.",
 execute(message, args){
-    const fs = require('fs');
+
     if (message.member.roles.find("name", "Monarca")){
     const Discord = require('discord.js');
     var embedColor = '#ff0000' 

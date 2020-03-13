@@ -1,6 +1,6 @@
 module.exports = {
     name: 'help',
-    description: "Ayuda e info.",
+    description: "Ayuda e informacion.",
     execute(message, args, bot){        
         const Discord = require('discord.js');
         let bicon = bot.user.displayAvatarURL;
