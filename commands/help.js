@@ -9,7 +9,7 @@ module.exports = {
         .setThumbnail(bicon)
         .setTitle(`Help`)
         .addField(`Prefijo:`, `v!`)
-        .addField(`Comandos disponibles:`, '`v!condenar` `v!warn` `v!micreador` `v!micodigo` `v!serverinfo` `v!botinfo` `v!help` `v!web` `v!inv` `v!server`')
+        .addField(`Comandos disponibles:`, '`v!condenar` `v!warn` `v!micreador` `v!micodigo` `v!serverinfo` `v!botinfo` `v!help` `v!web` `v!inv` `v!server` `v!say`')
         .setFooter(`Para info detallada de cada comando usa: v!help <comando>`);
 
         if (!args[1]) message.author.send(helpembed);
@@ -51,6 +51,10 @@ module.exports = {
                 message.channel.send('Muestra mi servidor.')
             break;
 
+            case 'say':
+                message.channel.send('Repite lo que el usuario ha escrito despues del `v!say `')
+            break;
+
             case 'v!condenar':
                 message.channel.send('Sintaxis condenar: v!condenar <@condenado> <motivo/motivos> <afectado>(no poner link al afectado, solo al condenado, osea al condenado poner @nick mientras q al afectado solo el nick, sin la @) PD: el condenado sera avisado por sus crimenes y sera baneado 1 dia.');
             break;
@@ -87,4 +91,7 @@ module.exports = {
                 message.channel.send('Muestra mi servidor.')
             break;
 
+            case 'v!say':
+                message.channel.send('Repite lo que el usuario ha escrito despues del `v!say `')
+            break;
         }}};

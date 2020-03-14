@@ -2,7 +2,7 @@ const Discord = require('discord.js');
 
 const bot = new Discord.Client();
 
-const token = 'NjYyMzM0MzIwODc0MjI1Njc0.Xmk4xg.RCzhJJb2TQZp3uCpRx_SyUzDbe0';
+const token = 'NjYyMzM0MzIwODc0MjI1Njc0.Xmus3Q.yuvqPFqDYHH-jer6WZ8B9ZJ6GAg';
 
 const PREFIX = 'v!'
 
@@ -42,7 +42,7 @@ bot.on('message', message => {
     break;
 
      case 'micodigo':
-      message.channel.send("Soy tanto de codigo abierto como de software libre. Cualquier duda: guillem0907@gmail.com Mi codigo fuente: https://github.com/Alonely0/Verdugo Github de 4lon3ly: https://github.com/Alonely0/", {files: ["./img/verdugo.jpeg"]});
+      message.channel.send("Soy tanto de codigo abierto como de software libre. Cualquier duda: `guillem0907@gmail.com` Mi codigo fuente: https://github.com/Alonely0/Verdugo Github de 4lon3ly0: https://github.com/Alonely0/", {files: ["./img/verdugo.jpeg"]});
     break;
 
      case 'serverinfo':
@@ -67,6 +67,10 @@ bot.on('message', message => {
 
      case 'server':
        message.channel.send('Mi servidor: https://discord.gg/wjRBMJm')
+    break;
+
+     case 'say':
+       bot.commands.get('say').execute(message, args, bot);
     break;
 
 }});
