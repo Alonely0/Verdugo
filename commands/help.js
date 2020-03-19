@@ -9,14 +9,14 @@ module.exports = {
         .setThumbnail(bicon)
         .setTitle(`Help`)
         .addField(`Prefijo:`, `v!`)
-        .addField(`Comandos disponibles:`, '`v!condenar` `v!warn` `v!micreador` `v!micodigo` `v!serverinfo` `v!botinfo` `v!help` `v!web` `v!inv` `v!server` `v!say`')
+        .addField(`Comandos disponibles:`, '`v!condenar` `v!warn` `v!micreador` `v!micodigo` `v!serverinfo` `v!botinfo` `v!help` `v!web` `v!inv` `v!server` `v!say` `v!ban`')
         .setFooter(`Para info detallada de cada comando usa: v!help <comando>`);
 
         if (!args[1]) message.author.send(helpembed);
         if (!args[1]) message.channel.send('Revisa tus mensajes privados.')
         switch(args[1]){
             case 'condenar':
-                message.channel.send('Sintaxis condenar: v!condenar <@condenado> <motivo/motivos> <afectado>(no poner link al afectado, solo al condenado, osea al condenado poner @nick mientras q al afectado solo el nick, sin la @) PD: el condenado sera avisado por sus crimenes y sera baneado 1 dia.');
+                message.channel.send('Sintaxis condenar: v!condenar <@condenado> <motivo/motivos> <afectado>(no poner link al afectado, solo al condenado, osea al condenado poner @nick mientras q al afectado solo el nick, sin la @) PD: el condenado sera avisado por sus crimenes. Se suele usar antes de `v!ban`. El bot registra los `v!condenar`, si es necesario consultarlo, contactar con el servidor de soporte (`v!server`).');
             break;
 
             case 'micreador':
@@ -76,22 +76,26 @@ module.exports = {
             break;
 
             case 'v!warn':
-                message.channel.send('Avisa a un miembro, parecido al v!condenar pero sin baneo. Uso: v!warn <@User> <Motivo>')
+                message.channel.send('Avisa a un miembro, parecido al v!condenar pero sin baneo. Uso: v!warn <@User> <Motivo>');
             break;
 
             case 'v!web':
-                message.channel.send('Muestra mi web.')
+                message.channel.send('Muestra mi web.');
             break;
 
             case 'v!inv':
-                message.channel.send('Muestra mi enlace de invitacion.')
+                message.channel.send('Muestra mi enlace de invitacion.');
             break;
 
             case 'v!server':
-                message.channel.send('Muestra mi servidor.')
+                message.channel.send('Muestra mi servidor.');
             break;
 
             case 'v!say':
-                message.channel.send('Repite lo que el usuario ha escrito despues del `v!say `')
+                message.channel.send('Repite lo que el usuario ha escrito despues del `v!say `');
+            break;
+
+            case 'v!ban':
+                message.channel.send('Banea al mencionado. Se suele usar despues de `v!condenar`');
             break;
         }}};

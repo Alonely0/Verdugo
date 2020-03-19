@@ -11,11 +11,11 @@
   "license": "GNU",
   "dependencies": {
     "async": "^3.2.0",
+    "cli-color": "^2.0.0",
     "discord.js": "^11.6.2",
     "dotenv": "^8.2.0",
     "moment": "^2.24.0",
     "ms": "^2.1.2",
-    "nodemon": "^2.0.2",
-    "sql": "^0.78.0"
+    "nodemon": "^2.0.2"
   }
 }

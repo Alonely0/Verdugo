@@ -2,6 +2,7 @@ module.exports = {
     name: 'serverinfo',
     description: "Info del servidor.",
     execute(message, args){     
+
      const Discord = require('discord.js');   
         function checkDays(date) {
             let now = new Date();
@@ -9,6 +10,7 @@ module.exports = {
             let days = Math.floor(diff / 86400000);
             return days + (days == 1 ? " day" : " days") + " ago";
         };
+       
         let verifLevels = ["None", "Low", "Medium", "(╯°□°）╯︵  ┻━┻", "┻━┻ミヽ(ಠ益ಠ)ノ彡┻━┻"];
         let region = {
             "brazil": ":flag_br: Brasil", 

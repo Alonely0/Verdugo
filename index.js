@@ -1,8 +1,10 @@
 const Discord = require('discord.js');
 
+const clc = require('cli-color');
+
 const bot = new Discord.Client();
 
-const token = 'NjYyMzM0MzIwODc0MjI1Njc0.Xmus3Q.yuvqPFqDYHH-jer6WZ8B9ZJ6GAg';
+const token = 'bot token';
 
 const PREFIX = 'v!'
 
@@ -17,15 +19,14 @@ for(const file of commandFiles){
     const command = require(`./commands/${file}`);
  
     bot.commands.set(command.name, command);
-}
+};
 
 bot.on('ready', () => {
-  console.log('El verdugo esta listo para matar');
+  console.log(clc.redBright('El verdugo esta listo para matar'));
   bot.user.setActivity('Matar | v!help = info')
 });
 
 bot.on('message', message => {
-
   let args = message.content.substring(PREFIX.length).split(" ");
 
   switch(args[0]){
@@ -49,6 +50,16 @@ bot.on('message', message => {
        bot.commands.get('serverinfo').execute(message, args);
     break;
 
+    case 'ban':
+      if (message.member.roles.find("name", "Monarca")){
+       var mentioned = message.mentions.users.first();
+       let reason = args.slice(1).join(' ');
+       message.guild.ban(mentioned, {reason: reason});
+     }else{
+      message.channel.send('Tienes que tener el rol `Monarca` para poder usar este comando');
+     };
+    break;
+    
      case 'botinfo':
        bot.commands.get('botinfo').execute(message, args, bot);
     break;
@@ -70,7 +81,9 @@ bot.on('message', message => {
     break;
 
      case 'say':
-       bot.commands.get('say').execute(message, args, bot);
+      var sayMessage = args.slice(1).join(' ')
+      message.delete().catch();
+      message.channel.send(sayMessage);
     break;
 
 }});

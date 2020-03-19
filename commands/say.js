@@ -4,8 +4,9 @@ module.exports = {
 execute(message, args, bot){
 const Discord = require("discord.js");
 
-      const sayMessage = args.slice(1).join(' ')
+      var sayMessage = args.slice(1).join(' ')
       message.delete().catch();
       message.channel.send(sayMessage);
+
 
 }};
