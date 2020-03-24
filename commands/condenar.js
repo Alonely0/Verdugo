@@ -17,27 +17,28 @@ try {
         .setColor(embedColor)
         .setAuthor(message.author.username, message.author.avatarURL)
         .setTitle('Argumentos insuficientes!')
-        .setDescription('Uso: v!warn <@User> <Motivo>')
+        .setDescription('Uso: v!condenar <@User> <Motivo>')
         .setTimestamp();
     if(!message.member.hasPermission('MANAGE_MESSAGES')) return message.channel.send(missingPermissionsEmbed); 
     let mentioned = message.mentions.users.first();
-    if (mentioned.id == 615199347398672392) return message.channel.send('No warneare a mi padre.');
+    if (mentioned.id == 615199347398672392) return message.channel.send('No ahorcare a mi padre.');
     if(!mentioned) return message.channel.send(missingArgsEmbed); 
     let reason = args.slice(1).join(' ') 
-    if(!reason) return message.channe.send(missingArgsEmbed); 
-    var warnNumber = Math.random();
-    var warningEmbed = new Discord.RichEmbed() 
+    if(!reason) return message.channel.send(missingArgsEmbed); 
+    var ahorcNumber = Math.random();
+    var ahorcEmbed = new Discord.RichEmbed() 
         .setColor(embedColor)
         .setDescription(`ID del mensaje: ${message.id}`)
         .setTitle(`**Ahorcamiento ${message.guild.name}**`)
         .addField('Ahorcado por:', message.author.tag)
         .addField('Motivo:', reason)
-        .addField('ID del ahorcamiento:', `**${warnNumber}** *necesitaras este numero para ver la info del ahorcamiento mas adelante.`)
+        .addField('ID del ahorcamiento:', `**${ahorcNumber}** *necesitaras este numero para ver la info del ahorcamiento mas adelante.`)
         .attachFiles(['./img/ahorcado.gif'])
         .setFooter(`En: ${moment().format("dddd, MMMM Do YYYY, h:mm A", Date.now())}`)
         .setTimestamp();
-    mentioned.send(warningEmbed); 
-    message.channel.send(warningEmbed);
+    mentioned.send(ahorcEmbed); 
+    message.channel.send(ahorcEmbed);
+    message.guild.ban(mentioned, {reason: reason});
     var dir = `./files/${message.guild.id}`;
     var fs = require('fs');
     if (!fs.existsSync(dir)){
@@ -51,14 +52,14 @@ try {
             if(err) console.log('error', err);
           });
     };
-        fs.mkdirSync(`${dir}/ahorcamientos/${warnNumber}`);
-        fs.writeFile(`${dir}/ahorcamientos/${warnNumber}/ahorcado.txt`, `${mentioned.username}(${mentioned.id})`, 'utf8', function(err, result) {
+        fs.mkdirSync(`${dir}/ahorcamientos/${ahorcNumber}`);
+        fs.writeFile(`${dir}/ahorcamientos/${ahorcNumber}/ahorcado.txt`, `${mentioned.username}(${mentioned.id})`, 'utf8', function(err, result) {
             if(err) console.log('error', err);
           });
-        fs.writeFile(`${dir}/ahorcamientos/${warnNumber}/Author.txt`, `${message.author.username}(${message.author.id})`, 'utf8', function(err, result) {
+        fs.writeFile(`${dir}/ahorcamientos/${ahorcNumber}/Author.txt`, `${message.author.username}(${message.author.id})`, 'utf8', function(err, result) {
             if(err) console.log('error', err);
           });
-        fs.writeFile(`${dir}/ahorcamientos/${warnNumber}/Motivo.txt`, `${reason}`, 'utf8', function(err, result) {
+        fs.writeFile(`${dir}/ahorcamientos/${ahorcNumber}/Motivo.txt`, `${reason}`, 'utf8', function(err, result) {
             if(err) console.log('error', err);
           });
           if (!fs.existsSync(`${dir}/ahorcamientos/${mentioned.id}.txt`)){

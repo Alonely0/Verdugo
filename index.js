@@ -4,7 +4,7 @@ const clc = require('cli-color');
 
 const bot = new Discord.Client();
 
-const token = 'bot token';
+const token = 'NjYyMzM0MzIwODc0MjI1Njc0.XmzkRw.p9353kHbhd8NVPVrUeBmHE8kVFA';
 
 const PREFIX = 'v!'
 
@@ -27,6 +27,7 @@ bot.on('ready', () => {
 });
 
 bot.on('message', message => {
+  if (message.content.startsWith(PREFIX)) {
   let args = message.content.substring(PREFIX.length).split(" ");
 
   switch(args[0]){
@@ -43,7 +44,7 @@ bot.on('message', message => {
     break;
 
      case 'micodigo':
-      message.channel.send("Soy tanto de codigo abierto como de software libre. Cualquier duda: `guillem0907@gmail.com` Mi codigo fuente: https://github.com/Alonely0/Verdugo Github de 4lon3ly0: https://github.com/Alonely0/", {files: ["./img/verdugo.jpeg"]});
+      message.channel.send("Soy tanto de codigo abierto como de software libre. Cualquier duda: `guillem0907@gmail.com` Mi codigo fuente: https://github.com/alonely0/verdugo");
     break;
 
      case 'serverinfo':
@@ -69,15 +70,15 @@ bot.on('message', message => {
     break;
 
      case 'web':
-       message.channel.send('La web: https://verdugo-discord-bot.webnode.es/')
+       message.channel.send('La web: https://verdugo-discord-bot.webnode.es');
     break;
      
      case 'inv':
-       message.channel.send('Enlace de invitacion del bot: https://discordapp.com/api/oauth2/authorize?client_id=662334320874225674&permissions=8&scope=bot')
+       message.channel.send('Enlace de invitacion del bot: https://discordapp.com/api/oauth2/authorize?client_id=662334320874225674&permissions=8&scope=bot');
     break;
 
      case 'server':
-       message.channel.send('Mi servidor: https://discord.gg/wjRBMJm')
+       message.channel.send('Mi servidor: https://discord.gg/Fs4EKJE');
     break;
 
      case 'say':
@@ -85,6 +86,18 @@ bot.on('message', message => {
       message.delete().catch();
       message.channel.send(sayMessage);
     break;
-
-}});
+  }
+    }else{
+      const vD = ('d@');
+      if (message.content.startsWith(vD)) {
+        let dArgs = message.content.substring(verdugoPrompt.length).split(" ");
+          switch(dArgs[0]) {
+            case 'whoimi':
+          }
+      
+      }else{
+      return;
+      };
+    };
+});
 bot.login(token);
