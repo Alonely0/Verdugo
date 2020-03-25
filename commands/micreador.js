@@ -4,7 +4,7 @@ module.exports = {
     description: "Mi creador.",
     execute(message, args){
      try {   
-        if (!args[1]) message.channel.send('especifica un argumento, usa el comando "v!help micreador" para ver los disponibles.')
+        if (!args[1]) message.channel.send('especifica un argumento, usa el comando "v!help micreador" para ver los disponibles.');
         switch(args[1]){
 
             case 'guillem0907':

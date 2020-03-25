@@ -1,13 +1,13 @@
 {
-  "name": "bot",
-  "version": "1.0.0",
+  "name": "Verdugo",
+  "version": "3.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "start": "node index.js"
   },
   "keywords": [],
-  "author": "@Guillem0907",
+  "author": "Guillem0907",
   "license": "GNU",
   "dependencies": {
     "async": "^3.2.0",
