@@ -16,11 +16,11 @@ module.exports = {
         if (!args[1]) message.channel.send('Revisa tus mensajes privados.');
         switch(args[1]){
             case 'condenar':
-                message.channel.send('Sintaxis condenar: v!condenar <@condenado> <motivo/motivos> <afectado>(no poner link al afectado, solo al condenado, osea al condenado poner @nick mientras q al afectado solo el nick, sin la @). El bot registra los `v!condenar`, si es necesario consultarlo, contactar con el servidor de soporte (`v!server`).');
+                message.channel.send('Sintaxis condenar: `v!condenar <@condenado> <motivo/motivos>`. El bot registra los `v!condenar`, si es necesario consultarlo, contactar con el servidor de soporte (`v!server`).');
             break;
 
             case 'micreador':
-                message.channel.send('Muestra informacion del creador, funciones: v!micreador guillem0907 | v!micreador 4lon3ly0');
+                message.channel.send('Muestra informacion del creador, funciones: `v!micreador guillem0907 | v!micreador 4lon3ly0`');
             break;
 
             case 'micodigo':
@@ -36,7 +36,7 @@ module.exports = {
             break;
 
             case 'warn':
-                message.channel.send('Avisa a un miembro, parecido al v!condenar pero sin baneo. Uso: v!warn <@User> <Motivo>');
+                message.channel.send('Avisa a un miembro, parecido al v!condenar pero sin baneo. Uso: `v!warn <@User> <Motivo>`');
             break;
 
             case 'web':

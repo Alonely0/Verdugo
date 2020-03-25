@@ -4,7 +4,7 @@ const clc = require('cli-color');
 
 const bot = new Discord.Client();
 
-const token = 'NjYyMzM0MzIwODc0MjI1Njc0.XmzkRw.p9353kHbhd8NVPVrUeBmHE8kVFA';
+const token = 'NjYyMzM0MzIwODc0MjI1Njc0.Xno4JA.L2Ukf_v7RGm6drv3qPIMZjEThi0';
 
 const PREFIX = 'v!'
 
@@ -87,17 +87,8 @@ bot.on('message', message => {
       message.channel.send(sayMessage);
     break;
   }
-    }else{
-      const vD = ('d@');
-      if (message.content.startsWith(vD)) {
-        let dArgs = message.content.substring(verdugoPrompt.length).split(" ");
-          switch(dArgs[0]) {
-            case 'whoimi':
-          }
-      
       }else{
       return;
       };
-    };
-});
+    });
 bot.login(token);
