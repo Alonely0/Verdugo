@@ -1,6 +1,6 @@
 module.exports = {
     name: 'say',
-    description: "Repite.",
+    description: "Repite lo que va despues de `v!say`.",
 execute(message, args, bot){
 const Discord = require("discord.js");
 
