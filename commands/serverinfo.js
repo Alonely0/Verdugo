@@ -46,7 +46,7 @@ module.exports = {
             .addField("Numero de canales", message.guild.channels.size, true)
             .addField("Roles", message.guild.roles.size, true)
             .addField("Fecha de creacion", `${message.channel.guild.createdAt.toUTCString().substr(0, 16)} (${checkDays(message.channel.guild.createdAt)})`, true)
-            .setThumbnail(message.guild.iconURL)
+            .setThumbnail(message.guild.iconURL);
         
             message.channel.send({embed});
         }
