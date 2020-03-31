@@ -11,7 +11,8 @@ module.exports = {
     .setThumbnail(bicon)
     .addField("Nombre bot:", bot.user.username)
     .addField("Creado en:", bot.user.createdAt)
-    .addField("version:", "2.5.0")
+    .addField("version:", "4.3.0")
+    .addFIeld("Licencia:", 'GNU')
     .addField("Devoloped by:", "Guillem0907, alias 4lon3ly0")
     .addField("API & lenguaje de programacion:", "Discord.js 11.6.2, programado completamente en Javascript.")
 
