@@ -8,13 +8,21 @@ module.exports = {
         .setColor('#ff0000')
         .setThumbnail(bicon)
         .setTitle(`Help`)
-        .addField(`Prefijo:`, `v!`)
-        .addField(`Comandos disponibles:`, '`v!condenar` `v!warn` `v!micreador` `v!micodigo` `v!serverinfo` `v!botinfo` `v!help` `v!web` `v!inv` `v!server` `v!say` `v!ban`')
+        .setDescription(`**Comandos disponibles:**`)
+        .addField(`**Prefijo:**`, '`v!`')
+        .addField('**Bot:**', '`v!botinfo` `v!micodigo` `v!micreador` `v!web` `v!inv` `v!server`')
+        .addField('**Moderacion:** **requieren el rol __Monarca__*', '`v!condenar` `v!warn` `v!ban` `v!unban` `v!clear`')
+        .addField('**Util:**', '`v!help` `v!serverinfo`')
+        .addField('**Varios:**', '`v!say` `v!parca` `v!teshin`')
         .setFooter(`Para info detallada de cada comando usa: v!help <comando>`);
 
         if (!args[1]) message.author.send(helpembed);
         if (!args[1]) message.channel.send('Revisa tus mensajes privados.');
         switch(args[1]){
+            case 'parca':
+                message.channel.send('Avisa a la muerte: `v!parca <usuario>`');
+            break;
+
             case 'condenar':
                 message.channel.send('Sintaxis condenar: `v!condenar <@condenado> <motivo/motivos>`. El bot registra los `v!condenar`, si es necesario consultarlo, contactar con el servidor de soporte (`v!server`).');
             break;
@@ -56,5 +64,10 @@ module.exports = {
             break;
 
             case 'ban':
-                message.channel.send('Banea de manera sigilosa al mencionado. Este no recivira mensaje con los motivos si se detallan, para que los reciva, usar `v!condenar`');
-        }}};
+                message.channel.send('Banea de manera sigilosa al mencionado. Este no recibira mensaje con los motivos si se detallan, para que los reciva, usar `v!condenar`. Este comando tampoco guarda registros, para guardar un registro con el baneado, el autor y el motivo en las bases de datos del bot usar `v!condenar`.');
+            break;
+
+            case 'unban':
+                message.channel.send('Quita el baneo. `v!unban <id_usuario>`')
+
+            }}};
