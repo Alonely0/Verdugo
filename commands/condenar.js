@@ -24,9 +24,10 @@ try {
         .setDescription(`ID del mensaje: ${message.id}`)
         .setTitle(`**Ahorcamiento ${message.guild.name}**`)
         .addField('Ahorcado por:', message.author.tag)
+        .addField('Ahorcado:', `<@${mentioned.id}>, (${mentioned.id})`)
         .addField('Motivo:', reason)
         .addField('ID del ahorcamiento:', `**${ahorcNumber}** *necesitaras este numero para ver la info del ahorcamiento mas adelante.`)
-        .attachFiles(['./img/ahorcado.gif'])
+        .setImage('https://i.imgur.com/NRKr1P1.gif')
         .setFooter(`En: ${moment().format("dddd, MMMM Do YYYY, h:mm A", Date.now())}`)
         .setTimestamp();
     mentioned.send(ahorcEmbed); 

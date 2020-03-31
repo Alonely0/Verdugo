@@ -17,16 +17,17 @@ execute(message, args){
         if (mentioned.id == 615199347398672392) return message.channel.send('No warneare a mi padre.');
         if(!mentioned) return message.channel.send(missingArgsEmbed); 
         let reason = args.slice(1).join(' ') 
-        if(!reason) return message.channe.send(missingArgsEmbed); 
+        if(!reason) return message.channel.send(missingArgsEmbed); 
         var warnNumber = Math.random();
         var warningEmbed = new Discord.RichEmbed() 
             .setColor(embedColor)
             .setDescription(`ID del mensaje: ${message.id}`)
             .setTitle(`**Warn ${message.guild.name}**`)
             .addField('Warneado por:', message.author.tag)
+            .addField('Warneado:', `<@${mentioned.id}>, (${mentioned.id})`)
             .addField('Motivo:', reason)
             .addField('ID del warn:', `**${warnNumber}** *necesitaras este numero para ver la info del warn mas adelante.`)
-            .attachFiles(['./img/warn.gif'])
+            .setImage('https://i.imgur.com/E21pGYF.gif')
             .setFooter(`En: ${moment().format("dddd, MMMM Do YYYY, h:mm A", Date.now())}`)
             .setTimestamp();
         mentioned.send(warningEmbed); 
