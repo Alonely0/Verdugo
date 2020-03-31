@@ -4,7 +4,7 @@ const clc = require('cli-color');
 
 const bot = new Discord.Client();
 
-const token = 'TOKEN';
+const token = 'NjYyMzM0MzIwODc0MjI1Njc0.XnrKDQ.HPX0bTdocFoDua5_ex1e_iIjQXw';
 
 const PREFIX = 'v!';
 
