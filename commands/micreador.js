@@ -1,4 +1,3 @@
-
 module.exports = {
     name: 'micreador',
     description: "Mi creador.",
@@ -12,7 +11,7 @@ module.exports = {
             break;
 
             case '4lon3ly0':
-                message.channel.send("4lon3ly0 es el nick y alias de Guilem0907. Se le conoce en la deepweb como 4lon3ly0. Es programador de JS, Html, Css, Python, Batch, Scratch, entre otros. Ademas, programa malware y exploits pese a ser un hacker etico y white hat. Ha programado los exploits para Whatsapp y los metodos de infeccion que, desgraciadamente, provocaron que el jefe de Amazon fueara hackeado. (No fue el).", {files: ["./img/4lon3ly0.png"]});
+                message.channel.send("4lon3ly0 es el nick y alias de Guilem0907. Se le conoce en la deepweb como 4lon3ly0. Es programador de JS, Html, Css, Python, Batch, Scratch, entre otros. Ademas, programa malware y exploits pese a ser un hacker etico y white hat. Ha programado los exploits para Whatsapp y los metodos de infeccion que, desgraciadamente, provocaron que el Jeff Bezos (CEO de Amazon) fueara hackeado. (No fue el).", {files: ["./img/4lon3ly0.png"]});
             break;
             
         }}
