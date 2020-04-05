@@ -13,14 +13,25 @@ module.exports = {
         .addField('**Bot:**', '`v!botinfo` `v!micodigo` `v!micreador` `v!web` `v!inv` `v!server`')
         .addField('**Moderacion:** **requieren el rol __Monarca__*', '`v!condenar` `v!warn` `v!ban` `v!unban` `v!clear`')
         .addField('**Util:**', '`v!help` `v!serverinfo`')
-        .addField('**Varios:**', '`v!say` `v!parca` `v!teshin`')
+        .addField('**Varios:**', '`v!say` `v!help`')
+        .addField('Secretos no tan secretos:', '||`v!parca`|| ||`v!revivir`|| ||`v!poseer`|| ||`v!teshin`|| ||`v!toby`||')
         .setFooter(`Para info detallada de cada comando usa: v!help <comando>`);
 
         if (!args[1]) message.author.send(helpembed);
         if (!args[1]) message.channel.send('Revisa tus mensajes privados.');
         switch(args[1]){
+            case 'revivir':
+                message.channel.send('Revive a un usuario.')
+            break;
+            
+            case 'toby':
+                message.channel.send('El perrito de mi papi.')
+            case 'poseer':
+                message.channel.send('Posee: `v!poseer <@usuario>`');
+            break;
+
             case 'parca':
-                message.channel.send('Avisa a la muerte: `v!parca <usuario>`');
+                message.channel.send('Avisa a la muerte: `v!parca <@usuario>`');
             break;
 
             case 'condenar':
