@@ -4,7 +4,7 @@ const clc = require('cli-color');
 
 const bot = new Discord.Client();
 
-const token = 'NjYyMzM0MzIwODc0MjI1Njc0.XnrKDQ.HPX0bTdocFoDua5_ex1e_iIjQXw';
+const token = 'NjYyMzM0MzIwODc0MjI1Njc0.XoN8Rw.ccf4A50BrcPUovzOvgHhRElMDFs';
 
 const PREFIX = 'v!';
 
@@ -26,39 +26,50 @@ bot.on('ready', () => {
   bot.user.setActivity('Matar | v!help = info')
 });
 
-bot.on('message', async message => {
+bot.on('message', message => {
   if (message.content.startsWith(PREFIX)) {
   let args = message.content.substring(PREFIX.length).split(" ");
+  try {
   if (message.guild.name === 'Golden Exilie') {message.channel.send('No voy a volver a responder comandos dentro de este server');
-  return;}
+  return;};
+  }catch(err) {return;};
   switch(args[0]){
-     case 'teshin':
+   case 'toby':
+      message.delete().catch();
+      message.channel.send('', {files: ['./img/toby.jpg']});
+   break;
+   
+   case 'revivir':
+      bot.commands.get('revivir').execute(message, args);
+   break;
+
+   case 'teshin':
       message.delete().catch();
       message.channel.send('', {files: ['./img/teshin.png']});
     break;
 
-     case 'micreador':
+    case 'micreador':
        bot.commands.get('micreador').execute(message, args);
     break;
 
-     case 'help': 
+    case 'help': 
        bot.commands.get('help').execute(message, args, bot);
     break;
     
-     case 'condenar':
+    case 'condenar':
        bot.commands.get('condenar').execute(message, args);
     break;
 
-     case 'micodigo':
+    case 'micodigo':
        message.channel.send("Soy tanto de codigo abierto como de software libre. Cualquier duda: `guillem0907@gmail.com` Mi codigo fuente: https://github.com/alonely0/verdugo");
     break;
 
-     case 'serverinfo':
+    case 'serverinfo':
        bot.commands.get('serverinfo').execute(message, args);
     break;
 
     case 'ban':
-      bot.commands.get('ban').execute(message, args)
+       bot.commands.get('ban').execute(message, args);
     break;
     
     case 'botinfo':
@@ -95,6 +106,10 @@ bot.on('message', async message => {
 
     case 'unban':
       bot.commands.get('unban').execute(message, args);
+    break;
+
+    case 'poseer':
+      bot.commands.get('poseer').execute(message, args);
     break;
     }
       }else{
