@@ -1,7 +1,8 @@
 module.exports = {
-    name: 'help',
-    description: "Ayuda e informacion.",
-    execute(message, args){   
+    name: 'ban',
+    description: "banea.",
+    execute(message, args){  
+      try { 
 if (message.member.roles.find("name", "Monarca")){
     var mentioned = message.mentions.users.first();
     let reason = args.slice(1).join(' ');
@@ -10,4 +11,5 @@ if (message.member.roles.find("name", "Monarca")){
   }else{
    message.channel.send('Tienes que tener el rol `Monarca` para poder usar este comando.');
   };
+}catch(err) {message.channel.send('error'), condole.log(err)};
 }};
