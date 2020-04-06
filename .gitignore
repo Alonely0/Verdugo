@@ -102,6 +102,9 @@ dist
 
 # TernJS port file
 .tern-port
-./files/
+
+# Other
+files/
+token.json
 verdugo.exe
 verdugo.txt
