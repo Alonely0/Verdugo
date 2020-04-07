@@ -1,6 +1,6 @@
 module.exports = {
 name: 'condenar',
-description: "Comando principal del verdugo que avisa al condenado. Se suele usar antes del v!ban",
+description: "Comando principal del verdugo que avisa al condenado.",
 execute(message, args){
 try {
   if (message.member.roles.find("name", "Monarca")){
