@@ -12,7 +12,7 @@ module.exports = {
         .addField(`**Prefijo:**`, '`v!`')
         .addField('**Bot:**', '`v!botinfo` `v!micodigo` `v!micreador` `v!web` `v!inv` `v!server`')
         .addField('**Moderacion:** **requieren el rol __Monarca__*', '`v!condenar` `v!warn` `v!ban` `v!unban` `v!clear`')
-        .addField('**Util:**', '`v!help` `v!serverinfo`')
+        .addField('**Util:**', '`v!help` `v!serverinfo` `v!ping`')
         .addField('**Varios:**', '`v!say` `v!help`')
         .addField('Secretos no tan secretos:', '||`v!parca`|| ||`v!revivir`|| ||`v!poseer`|| ||`v!teshin`|| ||`v!toby`||')
         .setFooter(`Para info detallada de cada comando usa: v!help <comando>`);
@@ -20,12 +20,18 @@ module.exports = {
         if (!args[1]) message.author.send(helpembed);
         if (!args[1]) message.channel.send('Revisa tus mensajes privados.');
         switch(args[1]){
+            case `ping`:
+                message.channel.send('Latencia del bot y de la API.');
+            break;
+            
             case 'revivir':
-                message.channel.send('Revive a un usuario.')
+                message.channel.send('Revive a un usuario.');
             break;
             
             case 'toby':
-                message.channel.send('El perrito de mi papi.')
+                message.channel.send('El perrito de mi papi.');
+            break;
+
             case 'poseer':
                 message.channel.send('Posee: `v!poseer <@usuario>`');
             break;
@@ -79,6 +85,6 @@ module.exports = {
             break;
 
             case 'unban':
-                message.channel.send('Quita el baneo. `v!unban <id_usuario>`')
+                message.channel.send('Quita el baneo. `v!unban <id_usuario>`');
 
             }}};
