@@ -3,6 +3,7 @@ module.exports = {
     description: 'Satan.',
 execute(message, args) {
     const Discord = require('discord.js');
+    message.delete().catch();
     var mentioned = message.mentions.users.first();
     if (!mentioned) return message.channel.send('Menciona a un usuario');
     var laParca = new Discord.RichEmbed()
