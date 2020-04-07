@@ -113,6 +113,13 @@ bot.on('message', message => {
     case 'poseer':
       bot.commands.get('poseer').execute(message, args);
     break;
+
+    case 'shutdown':
+       bot.commands.get('shutdown').execute(message, args);
+    break;
+
+    case 'ping':
+       bot.commands.get('ping').execute(message, args, bot)
     }
       }else{
       return;
