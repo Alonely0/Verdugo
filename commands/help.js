@@ -10,20 +10,22 @@ module.exports = {
         .setTitle(`Help`)
         .setDescription(`**Comandos disponibles:**`)
         .addField(`**Prefijo:**`, '`v!`')
-        .addField('**Bot:**', '`v!botinfo` `v!micodigo` `v!micreador` `v!web` `v!inv` `v!server`')
-        .addField('**Moderacion:** **requieren el rol __Monarca__*', '`v!condenar` `v!warn` `v!ban` `v!unban` `v!clear`')
-        .addField('**Util:**', '`v!help` `v!serverinfo` `v!ping`')
-        .addField('**Varios:**', '`v!say` `v!help`')
-        .addField('Secretos no tan secretos:', '||`v!parca`|| ||`v!revivir`|| ||`v!poseer`|| ||`v!teshin`|| ||`v!toby`||')
+        .addField('**Bot:**', '`v!botinfo` | `v!micodigo` | `v!micreador` | `v!web` | `v!inv` | `v!server`')
+        .addField('**Moderacion:** **requieren el rol __Monarca__*', '`v!condenar` | `v!warn` | `v!ban` | `v!unban` | `v!clear`')
+        .addField('**Util:**', '`v!help` | `v!serverinfo` | `v!userinfo` | `v!ping`')
+        .addField('**Varios:**', '`v!say` | `v!help`')
+        .addField('Secretos no tan secretos:', '||`v!parca`|| | ||`v!revivir`|| | ||`v!poseer`|| | ||`v!teshin`|| | ||`v!toby`||')
         .setFooter(`Para info detallada de cada comando usa: v!help <comando>`);
 
         if (!args[1]) message.author.send(helpembed);
         if (!args[1]) message.channel.send('Revisa tus mensajes privados.');
         switch(args[1]){
+            case 'userinfo':
+                message.channel.send('Informacion general del usuario. Puede que en un futuro tambien diga los warns y ahorcamientos.')
             case `ping`:
                 message.channel.send('Latencia del bot y de la API.');
             break;
-            
+
             case 'revivir':
                 message.channel.send('Revive a un usuario.');
             break;

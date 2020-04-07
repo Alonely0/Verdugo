@@ -119,7 +119,11 @@ bot.on('message', message => {
     break;
 
     case 'ping':
-       bot.commands.get('ping').execute(message, args, bot)
+       bot.commands.get('ping').execute(message, args, bot);
+    break;
+
+    case 'userinfo':
+       bot.commands.get('userinfo').execute(message, args)
     }
       }else{
       return;
