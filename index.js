@@ -123,7 +123,20 @@ bot.on('message', message => {
     break;
 
     case 'userinfo':
-       bot.commands.get('userinfo').execute(message, args)
+       bot.commands.get('userinfo').execute(message, args);
+    break;
+
+    case 'avadaKedavra':
+       bot.commands.get('avadaKedavra').execute(message, args);
+    break;
+
+    case 'f':
+       bot.commands.get('f').execute(message, args);
+    break;
+
+    case 'bugreport':
+       bot.commands.get('bugreport').execute(message, args);
+    break;
     }
       }else{
       return;
