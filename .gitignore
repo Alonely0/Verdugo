@@ -105,7 +105,7 @@ dist
 
 # Other
 files/
-token.json
+config.json
 verdugo.exe
 verdugo.txt
 Vverdugo.bat
