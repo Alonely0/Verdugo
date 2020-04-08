@@ -1,12 +1,12 @@
 const Discord = require('discord.js');
 
-const token = require('./token.json');
+const config = require('./config.json');
 
 const clc = require('cli-color');
 
 const bot = new Discord.Client();
 
-const TOKEN = token.botToken;
+const TOKEN = config.token;
 
 const PREFIX = 'v!';
 
@@ -63,7 +63,7 @@ bot.on('message', message => {
     break;
 
     case 'micodigo':
-       message.channel.send("Soy tanto de codigo abierto como de software libre. Cualquier duda: `guillem0907@gmail.com` Mi codigo fuente: https://github.com/alonely0/verdugo");
+       message.channel.send("Soy tanto de codigo abierto como de software libre. Cualquier duda: `soporteverdugo@gmail.com` Mi codigo fuente: https://github.com/alonely0/verdugo");
     break;
 
     case 'serverinfo':
@@ -135,7 +135,7 @@ bot.on('message', message => {
     break;
 
     case 'bugreport':
-       bot.commands.get('bugreport').execute(message, args);
+       bot.commands.get('bugreport').execute(message, args, config, bot);
     break;
     }
       }else{
