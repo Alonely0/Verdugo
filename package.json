@@ -17,6 +17,7 @@
     "dotenv": "^8.2.0",
     "moment": "^2.24.0",
     "ms": "^2.1.2",
+    "nodemailer": "^6.4.6",
     "nodemon": "^2.0.2",
     "picomatch": "^2.2.2"
   }
