@@ -20,6 +20,8 @@ module.exports = {
     .addField("Nombre bot:", `${bot.user.username}`)
     .addField("Creado en:", `${bot.user.createdAt}`)
     .addField("Tiempo online seguido:", `${duration(bot.uptime)}`)
+    .addField("Servidores:", `${bot.guilds.size}`)
+    .addField("Usuarios:", `${bot.users.size}`)
     .addField("version:", "5.5.0")
     .addField("Licencia:", 'GNU')
     .addField("Devoloped by:", "Guillem0907, alias 4lon3ly0")
