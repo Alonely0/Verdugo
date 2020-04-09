@@ -20,6 +20,10 @@ module.exports = {
         if (!args[1]) message.author.send(helpembed);
         if (!args[1]) message.channel.send('Revisa tus mensajes privados.');
         switch(args[1]){
+            case 'clear':
+                message.channel.send('Borra mensajes. No mas de 100 a la vez ni mas antiguos de 14 dias. `v!clear <numero>`')
+            break;
+
             case 'bugreport':
                 message.channel.send('Envia un bug a mi papi. `v!bugreport <bug, comando y conseqüencias>`');
             break;
