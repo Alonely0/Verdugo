@@ -32,7 +32,7 @@ execute(message, args) {
     }
 
     message.channel.bulkDelete(deleteAmount, true)
-        .then(deleted => message.channel.send(`He borrado \`${deleted.size}\` mensajes. PD: No puedo borrar mensajes mas antiguos de 14 dias.`))
+        .then(deleted => message.channel.send(`He borrado \`${deleted.size}\` mensajes. PD: No puedo borrar mas de 100 mensajes a la vez ni mensajes mas antiguos de 14 dias.`))
         .catch(err => message.reply(`Algo fue mal... ${err}`));
 }else{
     return message.channel.send('Necesitas el rol de `Monarca` para usar este comando.')
