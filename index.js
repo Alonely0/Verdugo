@@ -114,8 +114,8 @@ bot.on('message', message => {
       bot.commands.get('poseer').execute(message, args);
     break;
 
-    case 'shutdown':
-       bot.commands.get('shutdown').execute(message, args);
+    case 'dev':
+       bot.commands.get('dev').execute(message, args, bot);
     break;
 
     case 'ping':
