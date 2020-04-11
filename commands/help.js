@@ -14,12 +14,14 @@ module.exports = {
         .addField('**Moderacion:** **requieren el rol __Monarca__*', '`v!condenar` | `v!warn` | `v!ban` | `v!unban` | `v!clear`')
         .addField('**Util:**', '`v!help` | `v!serverinfo` | `v!userinfo` | `v!ping`')
         .addField('**Varios:**', '`v!say` | `v!help`')
-        .addField('Secretos no tan secretos:', '||`v!parca`|| ||`v!avadaKedavra`|| | ||`v!revivir`|| | ||`v!poseer`|| | ||`v!f`|| | ||`v!teshin`|| | ||`v!toby`||')
+        .addField('Secretos no tan secretos:', '||`v!parca`|| ||`v!avadaKedavra`|| | ||`v!crucio`|| | ||`v!revivir`|| | ||`v!poseer`|| | ||`v!f`|| | ||`v!teshin`|| | ||`v!toby`||')
         .setFooter(`Para info detallada de cada comando usa: v!help <comando>`);
 
         if (!args[1]) message.author.send(helpembed);
         if (!args[1]) message.channel.send('Revisa tus mensajes privados.');
         switch(args[1]){
+            case 'crucio':
+                message.channel.send('Tortura a alguien. `v!crucio <usuario>`')
             case 'clear':
                 message.channel.send('Borra mensajes. No mas de 100 a la vez ni mas antiguos de 14 dias. `v!clear <numero>`')
             break;

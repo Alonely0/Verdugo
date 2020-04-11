@@ -36,16 +36,16 @@ bot.on('message', message => {
   return;};
   }catch(err) {return;};
   switch(args[0]){
-   case 'toby':
+    case 'toby':
       message.delete().catch();
       message.channel.send('', {files: ['./img/toby.jpg']});
-   break;
+    break;
    
-   case 'revivir':
+    case 'revivir':
       bot.commands.get('revivir').execute(message, args);
-   break;
+    break;
 
-   case 'teshin':
+    case 'teshin':
       message.delete().catch();
       message.channel.send('', {files: ['./img/teshin.png']});
     break;
@@ -137,7 +137,11 @@ bot.on('message', message => {
     case 'bugreport':
        bot.commands.get('bugreport').execute(message, args, config, bot);
     break;
-    }
+
+    case 'crucio':
+       bot.commands.get('crucio').execute(message, args);
+    break;
+   }
       }else{
       return;
       
