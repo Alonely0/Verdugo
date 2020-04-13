@@ -25,17 +25,30 @@ for(const file of commandFiles){
 
 bot.on('ready', () => {
   console.log(clc.redBright('El verdugo esta listo para matar'));
-  bot.user.setActivity('Matar | v!help = info')
+  bot.user.setActivity('v!help | v!release');
 });
 
 bot.on('message', message => {
   if (message.content.startsWith(PREFIX)) {
+  if(message.author.bot) return;
   let args = message.content.substring(PREFIX.length).split(" ");
   try {
   if (message.guild.name === 'Golden Exilie') {message.channel.send('No voy a volver a responder comandos dentro de este server');
   return;};
   }catch(err) {return;};
   switch(args[0]){
+   case 'deep':
+      bot.commands.get('deep').execute(message, args);
+   break;
+   
+    case 'release':
+       bot.commands.get('release').execute(message, args, bot);
+    break;
+    
+    case 'registro':
+        bot.commands.get('registro').execute(message, args);
+    break;
+    
     case 'toby':
       message.delete().catch();
       message.channel.send('', {files: ['./img/toby.jpg']});
