@@ -22,7 +22,7 @@ module.exports = {
     .addField("Tiempo online seguido:", `${duration(bot.uptime)}`)
     .addField("Servidores:", `${bot.guilds.size}`)
     .addField("Usuarios:", `${bot.users.size}`)
-    .addField("version:", "5.5.0")
+    .addField("version:", "6.1")
     .addField("Licencia:", 'GNU')
     .addField("Devoloped by:", "Guillem0907, alias 4lon3ly0")
     .addField("API & lenguaje de programacion:", "Discord.js 11.6.2, programado completamente en Javascript.");
