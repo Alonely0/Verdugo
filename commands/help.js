@@ -10,18 +10,27 @@ module.exports = {
         .setTitle(`Help`)
         .setDescription(`**Comandos disponibles:**`)
         .addField(`**Prefijo:**`, '`v!`')
-        .addField('**Bot:**', '`v!botinfo` | `v!bugreport` | `v!micodigo` | `v!micreador` | `v!web` | `v!inv` | `v!server`')
-        .addField('**Moderacion:** **requieren el rol __Monarca__*', '`v!condenar` | `v!warn` | `v!ban` | `v!unban` | `v!clear`')
+        .addField('**Bot:**', '`v!botinfo` | `v!release` | `v!bugreport` | `v!micodigo` | `v!micreador` | `v!web` | `v!inv` | `v!server`')
+        .addField('**Moderacion:** **requieren el rol __Monarca__*', '`v!condenar` | `v!warn` | `v!ban` | `v!unban` | `v!clear` | `v!registro`')
         .addField('**Util:**', '`v!help` | `v!serverinfo` | `v!userinfo` | `v!ping`')
         .addField('**Varios:**', '`v!say` | `v!help`')
-        .addField('Secretos no tan secretos:', '||`v!parca`|| ||`v!avadaKedavra`|| | ||`v!crucio`|| | ||`v!revivir`|| | ||`v!poseer`|| | ||`v!f`|| | ||`v!teshin`|| | ||`v!toby`||')
+        .addField('Secretos no tan secretos:', '||`v!parca`|| | ||`v!avadaKedavra`|| | ||`v!crucio`|| | ||`v!revivir`|| | ||`v!poseer`|| | ||`v!f`|| | ||`v!deep`|| | ||`v!teshin`|| | ||`v!toby`||')
         .setFooter(`Para info detallada de cada comando usa: v!help <comando>`);
 
-        if (!args[1]) message.author.send(helpembed);
-        if (!args[1]) message.channel.send('Revisa tus mensajes privados.');
+        if (!args[1]) message.channel.send(helpembed);
         switch(args[1]){
+            case 'deep':
+                message.channel.send('Frase profunda aleatoria.');
+            break;
+
+            case 'registro':
+                message.channel.send('Mira los registros de ahorcamientos y warns. Para borrarlos o buscar uno en concreto si se ha perdido el ID ir a `v!server`. `v!registro <ahorcamiento/warn> <ID>`')
+            break;
+
             case 'crucio':
-                message.channel.send('Tortura a alguien. `v!crucio <usuario>`')
+                message.channel.send('Tortura a alguien. `v!crucio <usuario>`');
+            break;
+
             case 'clear':
                 message.channel.send('Borra mensajes. No mas de 100 a la vez ni mas antiguos de 14 dias. `v!clear <numero>`')
             break;
