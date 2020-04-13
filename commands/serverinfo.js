@@ -1,8 +1,10 @@
 module.exports = {
     name: 'serverinfo',
     description: "Info del servidor.",
-    execute(message, args){     
-
+    execute(message, args){   
+        try {  
+        var name = message.guild.owner.user.tag
+        }catch (err) {var name = 'no definido'}
      const Discord = require('discord.js');   
         function checkDays(date) {
             let now = new Date();
@@ -30,14 +32,14 @@ module.exports = {
             "southafrica": ":flag_za: Sudadrica",
             "europe": ":flag_eu: Europa"
         };
-        try {
+        
             const embed = new Discord.RichEmbed()      
             .setTitle("Informacion del sevidor:")
             .setColor("#ff0000")
             .setThumbnail(message.guild.iconURL)
             .addField("Nombre", message.guild.name, true)
             .addField("ID", message.guild.id, true)
-            .addField("Propietario", `${message.guild.owner.user.username}#${message.guild.owner.user.discriminator}`, true)
+            .addField("Propietario", `${name}`)
             .addField("Total miembros", message.guild.members.size, true)
             .addField("Total humanos", message.guild.members.filter(member => !member.user.bot).size, true)
             .addField("Total bots", message.guild.members.filter(member => member.user.bot).size, true)
@@ -49,7 +51,6 @@ module.exports = {
             .setThumbnail(message.guild.iconURL);
         
             message.channel.send({embed});
-        }
-       catch(err){message.channel.send('error')};
+
     }};
     
