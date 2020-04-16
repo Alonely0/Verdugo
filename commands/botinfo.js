@@ -10,8 +10,7 @@ module.exports = {
         const sec = Math.floor((ms / 1000) % 60).toString()
         const min = Math.floor((ms / (1000 * 60)) % 60).toString()
         const hrs = Math.floor((ms / (1000 * 60 * 60)) % 60).toString()
-        const dys = Math.floor((ms / (1000 * 60 * 60 * 60)) % 60).toString()
-        return `\`${dys.padStart(1, '0')}\` dias, \`${hrs.padStart(2, '0')}\` horas, \`${min.padStart(2, '0')}\` minutos y \`${sec.padStart(2, '0')}\` segundos seguidos.`
+        return `\`${hrs.padStart(2, '0')}\` horas, \`${min.padStart(2, '0')}\` minutos y \`${sec.padStart(2, '0')}\` segundos seguidos.`
     }
     let botembed = new Discord.RichEmbed()
     .setTitle("Bot information:")
@@ -19,13 +18,18 @@ module.exports = {
     .setThumbnail(bicon)
     .addField("Nombre bot:", `${bot.user.username}`)
     .addField("Creado en:", `${bot.user.createdAt}`)
-    .addField("Tiempo online seguido:", `${duration(bot.uptime)}`)
+    .addField("Tiempo online seguido:", `${duration(bot.uptime)}
+    ----------------------------------------------------------------------------
+    El bot se reinicia automaticamente cada 24h para evitar colapsos y pings, este reinicio dura \`3\` segundos de media.`)
     .addField("Servidores:", `${bot.guilds.size}`)
     .addField("Usuarios:", `${bot.users.size}`)
     .addField("version:", "6.1")
     .addField("Licencia:", 'GNU')
-    .addField("Devoloped by:", "Guillem0907, alias 4lon3ly0")
-    .addField("API & lenguaje de programacion:", "Discord.js 11.6.2, programado completamente en Javascript.");
+    .addField('Hosting:', 'Heroku')
+    .addField('Framework:', 'node.js')
+    .addField('Lenguaje:', 'JavaScript')
+    .addField("API:", "Discord.js")
+    .addField("Desarrollado por:", "Guillem0907, alias 4lon3ly0");
 
     message.channel.send(botembed);
     
