@@ -32,7 +32,7 @@ try {
         .setTimestamp();
     mentioned.send(ahorcEmbed); 
     message.channel.send(ahorcEmbed);
-    message.guild.ban(mentioned, {reason: reason});
+    setTimeout(function(){ message.guild.ban(mentioned, {reason: reason}); }, 500);
     var dir = `./files/${message.guild.id}`;
     var fs = require('fs');
     if (!fs.existsSync(dir)){

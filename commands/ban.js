@@ -6,7 +6,7 @@ module.exports = {
 if (message.member.roles.find("name", "Monarca")){
     var mentioned = message.mentions.users.first();
     let reason = args.slice(1).join(' ');
-    message.guild.ban(mentioned, {reason: reason});
+    setTimeout(function(){ message.guild.ban(mentioned, {reason: reason}); }, 500);
     message.channel.send('Usuario baneado.');
     message.channel.send('Es preferible el `v!condenar`, este avisa al condenado con los motivos y guarda el ban con el autor, baneado y motivo en los registros del bot.')
   }else{
