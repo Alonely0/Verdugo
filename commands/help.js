@@ -14,17 +14,21 @@ module.exports = {
         .addField('**Moderacion:** **requieren el rol __Monarca__*', '`v!condenar` | `v!warn` | `v!ban` | `v!unban` | `v!clear` | `v!registro`')
         .addField('**Util:**', '`v!help` | `v!serverinfo` | `v!userinfo` | `v!ping`')
         .addField('**Varios:**', '`v!say` | `v!help`')
-        .addField('Secretos no tan secretos:', '||`v!parca`|| | ||`v!avadaKedavra`|| | ||`v!crucio`|| | ||`v!revivir`|| | ||`v!poseer`|| | ||`v!f`|| | ||`v!deep`|| | ||`v!teshin`|| | ||`v!toby`||')
+        .addField('Secretos no tan secretos:', '||`v!parca`|| | ||`v!avadaKedavra`|| | ||`v!crucio`|| | ||`v!revivir`|| | ||`v!poseer`|| | ||`v!f`|| | ||`v!deep`|| | ||`v!NOT-`|| | ||`v!teshin`|| | ||`v!toby`||')
         .setFooter(`Para info detallada de cada comando usa: v!help <comando>`);
 
         if (!args[1]) message.channel.send(helpembed);
         switch(args[1]){
+            case 'NOT-':
+                message.channel.send('Haz que te proteja el NOT-. Te cambiara el nick de dentro del servidor a `NOT-TU-NOMBRE-DE-USUARIO`. Si se usa el argumento `--customName` te pondra el nombre que quieras. Uso: `v!NOT-` / `v!NOT- --customName <nombre que ira despues del NOT->`');
+            break;
+
             case 'deep':
                 message.channel.send('Frase profunda aleatoria.');
             break;
 
             case 'registro':
-                message.channel.send('Mira los registros de ahorcamientos y warns. Para borrarlos o buscar uno en concreto si se ha perdido el ID ir a `v!server`. `v!registro <ahorcamiento/warn> <ID>`')
+                message.channel.send('Mira los registros de ahorcamientos y warns. Para borrarlos o buscar uno en concreto si se ha perdido el ID ir a `v!server`. `v!registro <ahorcamiento/warn> <ID>`');
             break;
 
             case 'crucio':
@@ -32,7 +36,7 @@ module.exports = {
             break;
 
             case 'clear':
-                message.channel.send('Borra mensajes. No mas de 100 a la vez ni mas antiguos de 14 dias. `v!clear <numero>`')
+                message.channel.send('Borra mensajes. No mas de 100 a la vez ni mas antiguos de 14 dias. `v!clear <numero>`');
             break;
 
             case 'bugreport':

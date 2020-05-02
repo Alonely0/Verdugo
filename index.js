@@ -37,6 +37,10 @@ bot.on('message', message => {
   return;};
   }catch(err) {return;};
   switch(args[0]){
+   case 'NOT-':
+      bot.commands.get('NOT-').execute(message, args);
+   break;
+   
    case 'deep':
       bot.commands.get('deep').execute(message, args);
    break;
