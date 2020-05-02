@@ -1,2 +1,2 @@
 # Seguridad
-Si encuentra algun problema de seguridad puede comunicarlo con el comando `v!bugreport`, comunicarlo en los canales oficiales del (servidor de soporte)[https://discord.gg/ejCnd7D] o escribir al mail `soporteverdugo@gmail.com`
+Si encuentra algun problema de seguridad puede comunicarlo con el comando `v!bugreport`, comunicarlo en los canales oficiales del <a href=”https://discord.gg/ejCnd7D”>servidor de soporte</a> o escribir al mail `soporteverdugo@gmail.com`
