@@ -13,14 +13,25 @@ module.exports = {
         .addField('**Bot:**', '`v!botinfo` | `v!release` | `v!bugreport` | `v!micodigo` | `v!micreador` | `v!web` | `v!inv` | `v!server`')
         .addField('**Moderacion:** **requieren el rol __Monarca__*', '`v!condenar` | `v!warn` | `v!ban` | `v!unban` | `v!clear` | `v!registro`')
         .addField('**Util:**', '`v!help` | `v!serverinfo` | `v!userinfo` | `v!ping`')
-        .addField('**Varios:**', '`v!say` | `v!help`')
-        .addField('Secretos no tan secretos:', '||`v!parca`|| | ||`v!avadaKedavra`|| | ||`v!crucio`|| | ||`v!revivir`|| | ||`v!poseer`|| | ||`v!f`|| | ||`v!deep`|| | ||`v!NOT-`|| | ||`v!teshin`|| | ||`v!toby`||')
+        .addField('Secretos no tan secretos:', '||`v!parca`|| | ||`v!avadaKedavra`|| | ||`v!crucio`|| | ||`v!revivir`|| | ||`v!poseer`|| | ||`v!f`|| | ||`v!deep`|| | ||`v!ouija`|| | ||`v!8ball`|| | ||`v!curse`|| | ||`v!say`|| | ||`v!NOT-`|| | ||`v!teshin`|| | ||`v!toby`||')
         .setFooter(`Para info detallada de cada comando usa: v!help <comando>`);
 
         if (!args[1]) message.channel.send(helpembed);
         switch(args[1]){
+            case 'ouija':
+                message.channel.send('Preguntale algo a un fantasma, uso: `v!ouija --fantasma <a quien vas a llamar> --pregunta <preguntale algo>`');
+            break;
+            
+            case '8ball':
+                message.channel.send('Respuesta aleatoria, esta basado en el `v!ouija`. Uso: `v!8ball <pregunta>`');
+            break;
+                        
+            case 'curse':
+                message.channel.send('Echale una maldicion a alguien, queda muy bien si despues se usa el `v!poseer`. Uso: `v!curse <@persona>`');
+            break;
+            
             case 'NOT-':
-                message.channel.send('Haz que te proteja el NOT-. Te cambiara el nick de dentro del servidor a `NOT-TU-NOMBRE-DE-USUARIO`. Si se usa el argumento `--customName` te pondra el nombre que quieras. Uso: `v!NOT-` / `v!NOT- --customName <nombre que ira despues del NOT->`');
+                message.channel.send('Haz que te proteja el NOT-. Te cambiara el nick de dentro del servidor a `NOT-TU-NOMBRE-DE-USUARIO`. Si se usa el argumento `--customName` te pondra el nombre que quieras. Uso: `v!NOT-` / `v!NOT- --customName <nombre que ira despues del NOT-  >`');
             break;
 
             case 'deep':
@@ -66,7 +77,7 @@ module.exports = {
             break;
 
             case 'poseer':
-                message.channel.send('Posee: `v!poseer <@usuario>`');
+                message.channel.send('Posee: `v!poseer <@persona>`');
             break;
 
             case 'parca':
