@@ -25,7 +25,7 @@ module.exports = {
     .addField("Usuarios:", `${bot.users.size}`)
     .addField("version:", "7.30")
     .addField("Licencia:", 'GNU')
-    .addField('Hosting:', 'Glitch')
+    .addField('Hosting:', 'Heroku')
     .addField('Framework:', 'node.js')
     .addField('Lenguaje:', 'JavaScript')
     .addField("API:", "Discord.js")
