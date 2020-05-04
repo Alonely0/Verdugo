@@ -23,7 +23,7 @@ module.exports = {
     El bot se reinicia automaticamente cada 24h para evitar colapsos y pings, este reinicio dura \`3\` segundos de media.`)
     .addField("Servidores:", `${bot.guilds.size}`)
     .addField("Usuarios:", `${bot.users.size}`)
-    .addField("version:", "6.6")
+    .addField("version:", "7.30")
     .addField("Licencia:", 'GNU')
     .addField('Hosting:', 'Glitch')
     .addField('Framework:', 'node.js')
