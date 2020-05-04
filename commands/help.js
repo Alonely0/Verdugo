@@ -11,13 +11,25 @@ module.exports = {
         .setDescription(`**Comandos disponibles:**`)
         .addField(`**Prefijo:**`, '`v!`')
         .addField('**Bot:**', '`v!botinfo` | `v!release` | `v!bugreport` | `v!micodigo` | `v!micreador` | `v!web` | `v!inv` | `v!server`')
-        .addField('**Moderacion:** **requieren el rol __Monarca__*', '`v!condenar` | `v!warn` | `v!ban` | `v!unban` | `v!clear` | `v!registro`')
+        .addField('**Moderacion:** **requieren el rol __Monarca__*', '`v!condenar` | `v!warn` | `v!ban` | `v!unban` | `v!clear`')
         .addField('**Util:**', '`v!help` | `v!serverinfo` | `v!userinfo` | `v!ping`')
-        .addField('Secretos no tan secretos:', '||`v!parca`|| | ||`v!avadaKedavra`|| | ||`v!crucio`|| | ||`v!revivir`|| | ||`v!poseer`|| | ||`v!f`|| | ||`v!deep`|| | ||`v!ouija`|| | ||`v!8ball`|| | ||`v!curse`|| | ||`v!say`|| | ||`v!NOT-`|| | ||`v!teshin`|| | ||`v!toby`||')
+        .addField('Secretos no tan secretos:', '||`v!parca`|| | ||`v!avadaKedavra`|| | ||`v!shot`|| | ||`v!sniper`|| | ||`v!acribillar`|| | ||`v!crucio`|| | ||`v!revivir`|| | ||`v!poseer`|| | ||`v!f`|| | ||`v!deep`|| | ||`v!ouija`|| | ||`v!8ball`|| | ||`v!curse`|| | ||`v!say`|| | ||`v!NOT-`|| | ||`v!teshin`|| | ||`v!toby`||')
         .setFooter(`Para info detallada de cada comando usa: v!help <comando>`);
 
         if (!args[1]) message.channel.send(helpembed);
         switch(args[1]){
+            case 'acribillar':
+               message.channel.send('Acribilla a un usuario. Uso: `v!acribillar <@persona>`')
+            break;
+         
+            case 'sniper':
+                message.channel.send('Dispara con francotirador a un usuario. Uso: `v!sniper <@persona>`')
+            break;
+         
+            case 'shot':
+                message.channel.send('Dispara a un usuario. Uso: `v!shot <@persona>`')
+            break;
+
             case 'ouija':
                 message.channel.send('Preguntale algo a un fantasma, uso: `v!ouija --fantasma <a quien vas a llamar> --pregunta <preguntale algo>`');
             break;
@@ -36,10 +48,6 @@ module.exports = {
 
             case 'deep':
                 message.channel.send('Frase profunda aleatoria.');
-            break;
-
-            case 'registro':
-                message.channel.send('Mira los registros de ahorcamientos y warns. Para borrarlos o buscar uno en concreto si se ha perdido el ID ir a `v!server`. `v!registro <ahorcamiento/warn> <ID>`');
             break;
 
             case 'crucio':
@@ -85,7 +93,7 @@ module.exports = {
             break;
 
             case 'condenar':
-                message.channel.send('Sintaxis condenar: `v!condenar <@condenado> <motivo/motivos>`. El bot registra los `v!condenar`, si es necesario consultarlo, contactar con el servidor de soporte (`v!server`).');
+                message.channel.send('Sintaxis condenar: `v!condenar <@condenado> <motivo/motivos>`.');
             break;
 
             case 'micreador':
@@ -125,7 +133,7 @@ module.exports = {
             break;
 
             case 'ban':
-                message.channel.send('Banea de manera sigilosa al mencionado. Este no recibira mensaje con los motivos si se detallan, para que los reciva, usar `v!condenar`. Este comando tampoco guarda registros, para guardar un registro con el baneado, el autor y el motivo en las bases de datos del bot usar `v!condenar`.');
+                message.channel.send('Banea de manera sigilosa al mencionado. Este no recibira mensaje con los motivos si se detallan, para que los reciva, usar `v!condenar`.');
             break;
 
             case 'unban':

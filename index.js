@@ -1,18 +1,3 @@
-  const express = require('express');
-  const keepalive = require('express-glitch-keepalive');
-
-  const app = express();
-
-  app.use(keepalive);
-
-  app.get('/', (req, res) => {
-  res.json('This bot should be online! Uptimerobot will keep it alive');
-  });
-  app.get("/", (request, response) => {
-  response.sendStatus(200);
-  });
-  app.listen(process.env.PORT);
-
 const Discord = require('discord.js');
 
 const config = require('./config.json');
@@ -52,6 +37,18 @@ bot.on('message', message => {
   return;};
   }catch(err) {return;};
   switch(args[0]){
+   case 'acribillar':
+      bot.commands.get('acribillar').execute(message, args);
+   break;
+
+   case 'sniper':
+      bot.commands.get('sniper').execute(message, args);
+   break;
+
+   case 'shot':
+      bot.commands.get('shot').execute(message, args);
+   break;
+
    case 'ouija':
       bot.commands.get('ouija').execute(message, args);
    break;
@@ -74,10 +71,6 @@ bot.on('message', message => {
    
     case 'release':
        bot.commands.get('release').execute(message, args, bot);
-    break;
-    
-    case 'registro':
-        bot.commands.get('registro').execute(message, args);
     break;
     
     case 'toby':
