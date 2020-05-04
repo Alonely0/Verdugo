@@ -25,20 +25,12 @@ const respuestas = [
     "goodbye",
     "-...-",
     "-___-",
-    ":D",
-    ":)",
-    ":|",
-    ":V",
-    ":v",
-    ":p",
-    ":P",
-    ":/",
-    ":(",
-    ":C",
     "Ire a por ti a las 3:00 AM",
     "No estoy diponible, llamame luego",
     "No deberias haberme invocado",
     "No tengo porque responder a eso",
+    "Díselo a alguien vivo",
+    "El mundo de los muertos es peligro, ten cuidado"
 ];
 var pregunta__ = message.content.search("--pregunta ");
 var fantasma____ = message.content.search("--fantasma ");
