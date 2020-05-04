@@ -6,7 +6,7 @@ var Discord = require('discord.js');
 var nodemailer = require('nodemailer');
 var moment = require('moment');
 const bugChannel = bot.channels.find('id', '698213868056608918')
-const password = config.verdugobugreport
+const password = config.bugreportPSW
 var mailText = message.content.slice(12);
 var bugEmbed = new Discord.RichEmbed()
  .setTitle('**__Bug Report__**')
@@ -41,7 +41,7 @@ var mailOptions = {
 
 transporter.sendMail(mailOptions, function(error, info){
   if (error) {
-      message.reply('ha habido un error con el envio, porfavor, contacta manualmente con `v!server`.');
+      message.reply('ha habido un error con el envio, por favor, contacta manualmente con `v!server`.');
     console.log(error);
   } else {
     message.channel.send(bugEmbed);
