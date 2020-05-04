@@ -18,7 +18,6 @@ execute(message, args){
         if(!mentioned) return message.channel.send(missingArgsEmbed); 
         let reason = args.slice(1).join(' ') 
         if(!reason) return message.channel.send(missingArgsEmbed); 
-        var warnNumber = Math.random();
         var warningEmbed = new Discord.RichEmbed() 
             .setColor(embedColor)
             .setDescription(`ID del mensaje: ${message.id}`)
@@ -26,53 +25,11 @@ execute(message, args){
             .addField('Warneado por:', message.author.tag)
             .addField('Warneado:', `<@${mentioned.id}>, (${mentioned.id})`)
             .addField('Motivo:', reason)
-            .addField('ID del warn:', `**${warnNumber}** *necesitaras este numero para ver la info del warn mas adelante.`)
             .setImage('https://i.imgur.com/E21pGYF.gif')
             .setFooter(`En: ${moment().format("dddd, MMMM Do YYYY, h:mm A", Date.now())}`)
             .setTimestamp();
         mentioned.send(warningEmbed); 
         message.channel.send(warningEmbed);
-    
-        var fs = require('fs');
-        var dir = `./files/${message.guild.id}`;
-        
-        if (!fs.existsSync(dir)){
-            fs.mkdirSync(dir, function(err, result) {
-                if(err) console.log('error', err);
-              });
-            fs.mkdirSync(`${dir}/warns`, function(err, result) {
-                if(err) console.log('error', err);
-              });
-            fs.mkdirSync(`${dir}/ahorcamientos`, function(err, result) {
-                if(err) console.log('error', err);
-              });
-        };
-            fs.mkdirSync(`${dir}/warns/${warnNumber}`);
-            fs.writeFile(`${dir}/warns/${warnNumber}/Warned.txt`, `${mentioned.username}(${mentioned.id})`, 'utf8', function(err, result) {
-                if(err) console.log('error', err);
-              });
-            fs.writeFile(`${dir}/warns/${warnNumber}/Author.txt`, `${message.author.username}(${message.author.id})`, 'utf8', function(err, result) {
-                if(err) console.log('error', err);
-              });
-            fs.writeFile(`${dir}/warns/${warnNumber}/Motivo.txt`, `${reason}`, 'utf8', function(err, result) {
-                if(err) console.log('error', err);
-              });
-              if (!fs.existsSync(`${dir}/warns/${mentioned.id}.txt`)){
-                fs.writeFile(`${dir}/warns/${mentioned.id}.txt`, 1, 'utf8', function(err, result) {
-                    if(err) console.log('error', err);
-                  });
-              }else{
-                  fs.readFile(`${dir}/warns/${mentioned.id}.txt`, 'utf8', function(err, data) {
-                  var x = +data;
-                  var y = 1;
-                  var z = x + y;
-                  fs.writeFile(`${dir}/warns/${mentioned.id}.txt`, `${z}`, 'utf8', function(err, result) {
-                      if(err) console.log('error', err);
-                  });
-                  });
-              };
-    
-    
         }else{
         message.channel.send('Tienes que tener el rol `Monarca` para poder usar este comando');
         
