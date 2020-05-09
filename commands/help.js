@@ -13,11 +13,19 @@ module.exports = {
         .addField('**Bot:**', '`v!botinfo` | `v!release` | `v!bugreport` | `v!micodigo` | `v!micreador` | `v!web` | `v!inv` | `v!server`')
         .addField('**Moderacion:** **requieren el rol __Monarca__*', '`v!condenar` | `v!warn` | `v!ban` | `v!unban` | `v!clear`')
         .addField('**Util:**', '`v!help` | `v!serverinfo` | `v!userinfo` | `v!ping`')
-        .addField('Secretos no tan secretos:', '||`v!parca`|| | ||`v!avadaKedavra`|| | ||`v!shot`|| | ||`v!sniper`|| | ||`v!acribillar`|| | ||`v!crucio`|| | ||`v!revivir`|| | ||`v!poseer`|| | ||`v!f`|| | ||`v!deep`|| | ||`v!ouija`|| | ||`v!8ball`|| | ||`v!curse`|| | ||`v!say`|| | ||`v!NOT-`|| | ||`v!teshin`|| | ||`v!toby`||')
+        .addField('Secretos no tan secretos:', '||`v!parca`|| | ||`v!avadaKedavra`|| | ||`v!shot`|| | ||`v!sniper`|| | ||`v!acribillar`|| | ||`v!funeral`|| | ||`v!crucio`|| | ||`v!revivir`|| | ||`v!poseer`|| | ||`v!f`|| | ||`v!deep`|| | ||`v!ouija`|| | ||`v!8ball`|| | ||`v!curse`|| | ||`v!meme`|| | ||`v!say`|| | ||`v!NOT-`|| | ||`v!teshin`|| | ||`v!toby`||')
         .setFooter(`Para info detallada de cada comando usa: v!help <comando>`);
 
         if (!args[1]) message.channel.send(helpembed);
         switch(args[1]){
+            case 'meme':
+               message.channel.send('meme aleatorio. Uso: `v!meme`')
+            break;
+         
+            case 'funeral':
+                message.channel.send('RIP. Uso: `v!funeral <@persona>`')
+            break;
+         
             case 'acribillar':
                message.channel.send('Acribilla a un usuario. Uso: `v!acribillar <@persona>`')
             break;

@@ -37,6 +37,14 @@ bot.on('message', message => {
   return;};
   }catch(err) {return;};
   switch(args[0]){
+   case 'meme':
+      bot.commands.get('meme').execute(message, args);
+   break;
+
+   case 'funeral':
+      bot.commands.get('funeral').execute(message, args);
+   break;
+
    case 'acribillar':
       bot.commands.get('acribillar').execute(message, args);
    break;
