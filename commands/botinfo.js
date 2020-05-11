@@ -23,10 +23,10 @@ module.exports = {
     El bot se reinicia automaticamente cada 24h para evitar colapsos y pings, este reinicio dura \`3\` segundos de media.`)
     .addField("Servidores:", `${bot.guilds.size}`)
     .addField("Usuarios:", `${bot.users.size}`)
-    .addField("version:", "7.40")
+    .addField("version:", "7.45")
     .addField("Licencia:", 'GNU')
-    .addField('Hosting:', 'Heroku')
-    .addField('Framework:', 'node.js')
+    .addField('Hosting:', 'Glitch')
+    .addField('Framework:', 'Node.js')
     .addField('Lenguaje:', 'JavaScript')
     .addField("API:", "Discord.js")
     .addField("Desarrollado por:", "Guillem0907, alias 4lon3ly0");
