@@ -1,6 +1,6 @@
 {
   "name": "Verdugo",
-  "version": "7.40",
+  "version": "7.45",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -19,6 +19,7 @@
     "ms": "^2.1.2",
     "nodemailer": "^6.4.6",
     "nodemon": "^2.0.2",
+    "os": "^0.1.1",
     "picomatch": "^2.2.2"
   }
 }
