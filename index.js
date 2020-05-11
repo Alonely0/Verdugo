@@ -37,6 +37,10 @@ bot.on('message', message => {
   return;};
   }catch(err) {return;};
   switch(args[0]){
+   case 'consumo':
+      bot.commands.get('consumo').execute(message, args);
+   break;
+   
    case 'meme':
       bot.commands.get('meme').execute(message, args);
    break;
