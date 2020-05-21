@@ -8,7 +8,7 @@
   },
   "keywords": [],
   "author": "Guillem0907",
-  "license": "GNU",
+  "license": "GPL-3.0-or-later",
   "dependencies": {
     "async": "^3.2.0",
     "cli-color": "^2.0.0",
